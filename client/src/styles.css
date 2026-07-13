@@ -1467,6 +1467,19 @@ button {
     min-height: 44px;
     width: 100%;
   }
+
+  .student-count strong {
+    font-size: 1.5rem;
+  }
+
+  .student-count span {
+    font-size: 0.88rem;
+  }
+
+  .student-count .avatar-stack img {
+    height: 36px;
+    width: 36px;
+  }
 }
 
 /* Scroll Reveal animations */

@@ -154,7 +154,7 @@ export default function Hero() {
             <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=120&q=80" alt="Indian learner" />
             <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=120&q=80" alt="Indian mentor" />
           </div>
-          <div><strong>50k+</strong><span>Students learning with us</span></div>
+          <div><strong>50K+</strong><span>Students learning with us</span></div>
         </div>
       </div>
       <div 
