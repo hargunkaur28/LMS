@@ -1,7 +1,17 @@
 import { Menu, X } from 'lucide-react';
+import GooeyNav from './GooeyNav';
 
 export default function Header({ mobileOpen, setMobileOpen }) {
   const nav = ['Home', 'Courses', 'Mentors', 'Success Stories', 'Pricing', 'About'];
+
+  const navItems = [
+    { label: 'Home', href: '#' },
+    { label: 'Courses', href: '#courses' },
+    { label: 'Mentors', href: '#mentors' },
+    { label: 'Success Stories', href: '#success-stories' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'About', href: '#about' }
+  ];
 
   return (
     <header className="site-header">
@@ -9,13 +19,9 @@ export default function Header({ mobileOpen, setMobileOpen }) {
       <button className="icon-button menu-button" aria-label="Open navigation" onClick={() => setMobileOpen(true)}>
         <Menu size={22} />
       </button>
-      <nav className="desktop-nav" aria-label="Primary navigation">
-        {nav.map((item) => (
-          <a key={item} className={item === 'Home' ? 'active' : ''} href={`#${item.toLowerCase().replaceAll(' ', '-')}`}>
-            {item}
-          </a>
-        ))}
-      </nav>
+      <div className="desktop-nav-wrapper">
+        <GooeyNav items={navItems} />
+      </div>
       <div className="header-actions">
         <button className="ghost-button">Log In</button>
         <button className="primary-button">Get Started</button>
