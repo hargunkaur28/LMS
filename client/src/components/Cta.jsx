@@ -1,6 +1,9 @@
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function Cta() {
+  const { t } = useLanguage();
+
   return (
     <section className="cta">
       <div className="cta-visual">
@@ -9,10 +12,10 @@ export default function Cta() {
         <span className="cta-dot bottom-dot"></span>
       </div>
       <div>
-        <h2>Ready to start learning?</h2>
-        <p>Join learners preparing for school exams, JEE and NEET with focused video courses and quizzes.</p>
+        <h2>{t('cta.heading')}</h2>
+        <p>{t('cta.description')}</p>
       </div>
-      <a className="secondary-button large" href="#courses">Apply for Membership <ArrowRight size={17} /></a>
+      <a className="secondary-button large" href="#courses">{t('cta.button')} <ArrowRight size={17} /></a>
     </section>
   );
 }

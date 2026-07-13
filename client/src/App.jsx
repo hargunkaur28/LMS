@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { courses } from './data/courses.js';
+import { LanguageProvider } from './context/LanguageContext.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import Stats from './components/Stats.jsx';
@@ -20,19 +21,25 @@ export default function App() {
   );
 
   if (selectedCourse) {
-    return <CourseDetail course={selectedCourse} onBack={() => setSelectedCourseId(null)} />;
+    return (
+      <LanguageProvider>
+        <CourseDetail course={selectedCourse} onBack={() => setSelectedCourseId(null)} />
+      </LanguageProvider>
+    );
   }
 
   return (
-    <main>
-      <Header mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
-      <Hero />
-      <ScrollReveal><Stats /></ScrollReveal>
-      <ScrollReveal><WhyChoose /></ScrollReveal>
-      <ScrollReveal><Courses onSelect={setSelectedCourseId} /></ScrollReveal>
-      <ScrollReveal><Testimonials /></ScrollReveal>
-      <ScrollReveal><Cta /></ScrollReveal>
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main>
+        <Header mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
+        <Hero />
+        <ScrollReveal><Stats /></ScrollReveal>
+        <ScrollReveal><WhyChoose /></ScrollReveal>
+        <ScrollReveal><Courses onSelect={setSelectedCourseId} /></ScrollReveal>
+        <ScrollReveal><Testimonials /></ScrollReveal>
+        <ScrollReveal><Cta /></ScrollReveal>
+        <Footer />
+      </main>
+    </LanguageProvider>
   );
 }

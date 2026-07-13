@@ -1,45 +1,24 @@
 import { BarChart3, BookOpen, ClipboardCheck, Star, Target, UsersRound } from 'lucide-react';
 import TiltedCard from './TiltedCard';
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function WhyChoose() {
+  const { t } = useLanguage();
+
   const items = [
-    {
-      Icon: Target,
-      title: 'Structured Pathways',
-      text: 'Step-by-step learning modules mapped for school grades, JEE and NEET readiness.'
-    },
-    {
-      Icon: UsersRound,
-      title: 'Premium Mentorship',
-      text: 'One-on-one guidance patterns ready for future backend scheduling and doubt rooms.'
-    },
-    {
-      Icon: BarChart3,
-      title: 'Deep Analytics',
-      text: 'Progress states and quiz results are kept client-side now and can move to APIs later.'
-    },
-    {
-      Icon: BookOpen,
-      title: 'Smart Learning',
-      text: 'YouTube lessons, notes, quizzes and mock-test style practice in one front-end flow.'
-    },
-    {
-      Icon: ClipboardCheck,
-      title: 'Practice & Assess',
-      text: 'Course detail pages include subject-specific quizzes with instant scoring.'
-    },
-    {
-      Icon: Star,
-      title: 'Achieve & Excel',
-      text: 'Built for Nursery to 12th, foundation batches, JEE Main/Advanced and NEET UG aspirants.'
-    }
+    { Icon: Target, title: t('whyChoose.card1Title'), text: t('whyChoose.card1Text') },
+    { Icon: UsersRound, title: t('whyChoose.card2Title'), text: t('whyChoose.card2Text') },
+    { Icon: BarChart3, title: t('whyChoose.card3Title'), text: t('whyChoose.card3Text') },
+    { Icon: BookOpen, title: t('whyChoose.card4Title'), text: t('whyChoose.card4Text') },
+    { Icon: ClipboardCheck, title: t('whyChoose.card5Title'), text: t('whyChoose.card5Text') },
+    { Icon: Star, title: t('whyChoose.card6Title'), text: t('whyChoose.card6Text') }
   ];
 
   return (
     <section className="why" id="about">
-      <span className="section-kicker">Why Choose LMS</span>
-      <h2>Everything a student needs in one place</h2>
-      <p className="section-intro">Discover tools and guidance that make learning more focused, trackable and enjoyable.</p>
+      <span className="section-kicker">{t('whyChoose.kicker')}</span>
+      <h2>{t('whyChoose.heading')}</h2>
+      <p className="section-intro">{t('whyChoose.intro')}</p>
       <div className="feature-grid">
         {items.map(({ Icon, title, text }) => (
           <TiltedCard

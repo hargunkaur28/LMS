@@ -1,30 +1,33 @@
 import { ArrowRight } from 'lucide-react';
 import { courses } from '../data/courses.js';
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function Courses({ onSelect }) {
+  const { t, language } = useLanguage();
+
   return (
     <section className="courses-section" id="courses">
       <div className="section-heading">
         <div>
-          <span className="section-kicker">Our Courses</span>
-          <h2>Signature Curriculums</h2>
-          <p>Real YouTube-based course pathways for Indian school and entrance exam learners.</p>
+          <span className="section-kicker">{t('courses.kicker')}</span>
+          <h2>{t('courses.heading')}</h2>
+          <p>{t('courses.description')}</p>
         </div>
-        <a href="#courses">View all courses <ArrowRight size={16} /></a>
+        <a href="#courses">{t('courses.viewAll')} <ArrowRight size={16} /></a>
       </div>
       <div className="marquee-container">
         <div className="marquee-track course-track">
           {[...courses, ...courses].map((course, index) => (
             <article className="course-card" key={`${course.id}-${index}`}>
               <div className="course-media">
-                <img src={course.image} alt={course.imageAlt} />
-                <span>{course.duration}</span>
+                <img src={course.image} alt={typeof course.imageAlt === 'object' ? course.imageAlt[language] : course.imageAlt} />
+                <span>{typeof course.duration === 'object' ? course.duration[language] : course.duration}</span>
               </div>
               <div className="course-body">
                 <p className="provider">{course.provider}</p>
-                <h3>{course.title}</h3>
-                <p className="course-desc">{course.summary}</p>
-                <button className="outline-button" onClick={() => onSelect(course.id)}>Learn More</button>
+                <h3>{typeof course.title === 'object' ? course.title[language] : course.title}</h3>
+                <p className="course-desc">{typeof course.summary === 'object' ? course.summary[language] : course.summary}</p>
+                <button className="outline-button" onClick={() => onSelect(course.id)}>{t('courses.learnMore')}</button>
               </div>
             </article>
           ))}

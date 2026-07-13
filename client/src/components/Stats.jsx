@@ -1,11 +1,14 @@
 import { ClipboardCheck, LibraryBig, PlayCircle, Trophy } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function Stats() {
+  const { t } = useLanguage();
+
   const stats = [
-    [LibraryBig, '3+', 'Real YouTube Courses'],
-    [ClipboardCheck, '36+', 'Quiz Questions'],
-    [PlayCircle, '500+', 'Video Lessons'],
-    [Trophy, '12+', 'Classes Covered']
+    [LibraryBig, '3+', t('stats.courses')],
+    [ClipboardCheck, '36+', t('stats.quizQuestions')],
+    [PlayCircle, '500+', t('stats.videoLessons')],
+    [Trophy, '12+', t('stats.classesCovered')]
   ];
 
   return (
