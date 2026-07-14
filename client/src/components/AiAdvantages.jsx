@@ -1,24 +1,27 @@
 import React from 'react';
 import './AiAdvantages.css';
 import { Target, Search, BookOpen, Languages, Globe, Mic, TrendingUp } from 'lucide-react';
-
-const steps = [
-  { id: 1, text: 'Set your learning goals', icon: Target, top: true },
-  { id: 2, text: 'Smart day-by-day topic search', icon: Search, top: false },
-  { id: 3, text: 'Personalized study modules', icon: BookOpen, top: true },
-  { id: 4, text: 'Seamlessly switch to Hindi', icon: Languages, top: false },
-  { id: 5, text: 'Learn in your preferred language', icon: Globe, top: true },
-  { id: 6, text: 'Listen with voice recognition', icon: Mic, top: false },
-  { id: 7, text: 'Track your growth with AI', icon: TrendingUp, top: true },
-];
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function AiAdvantages() {
+  const { t } = useLanguage();
+
+  const steps = [
+    { id: 1, text: t('aiRoadmap.step1'), icon: Target, top: true },
+    { id: 2, text: t('aiRoadmap.step2'), icon: Search, top: false },
+    { id: 3, text: t('aiRoadmap.step3'), icon: BookOpen, top: true },
+    { id: 4, text: t('aiRoadmap.step4'), icon: Languages, top: false },
+    { id: 5, text: t('aiRoadmap.step5'), icon: Globe, top: true },
+    { id: 6, text: t('aiRoadmap.step6'), icon: Mic, top: false },
+    { id: 7, text: t('aiRoadmap.step7'), icon: TrendingUp, top: true },
+  ];
+
   return (
     <section className="ai-roadmap-section">
       <div className="roadmap-top-curve"></div>
       
       <div className="roadmap-container">
-        <h2 className="roadmap-title">AI Powered Learning in 2026:</h2>
+        <h2 className="roadmap-title">{t('aiRoadmap.title')}</h2>
         
         <div className="roadmap-timeline-wrapper">
           <div className="roadmap-timeline-line"></div>
@@ -53,7 +56,7 @@ export default function AiAdvantages() {
           </div>
         </div>
 
-        <h3 className="roadmap-subtitle">A Step-by-Step Guide to Smarter Learning</h3>
+        <h3 className="roadmap-subtitle">{t('aiRoadmap.subtitle')}</h3>
       </div>
 
       <div className="roadmap-bottom-curve"></div>

@@ -145,6 +145,19 @@ export const translations = {
       quizKicker: 'Real Practice Quiz',
       attempted: 'attempted',
       explanation: 'Explanation'
+    },
+
+    // AI Roadmap
+    aiRoadmap: {
+      title: 'AI Powered Learning in 2026:',
+      subtitle: 'A Step-by-Step Guide to Smarter Learning',
+      step1: 'Set your learning goals',
+      step2: 'Smart day-by-day topic search',
+      step3: 'Personalized study modules',
+      step4: 'Seamlessly switch to Hindi',
+      step5: 'Learn in your preferred language',
+      step6: 'Listen with voice recognition',
+      step7: 'Track your growth with AI'
     }
   },
 
@@ -294,6 +307,19 @@ export const translations = {
       quizKicker: 'रियल प्रैक्टिस क्विज़',
       attempted: 'प्रयास किए',
       explanation: 'व्याख्या'
+    },
+
+    // AI Roadmap
+    aiRoadmap: {
+      title: '2026 में AI-आधारित शिक्षा:',
+      subtitle: 'स्मार्ट लर्निंग के लिए चरण-दर-चरण मार्गदर्शिका',
+      step1: 'अपने सीखने के लक्ष्य निर्धारित करें',
+      step2: 'स्मार्ट दिन-प्रतिदिन विषय खोज',
+      step3: 'व्यक्तिगत अध्ययन मॉड्यूल',
+      step4: 'आसानी से हिंदी में स्विच करें',
+      step5: 'अपनी पसंदीदा भाषा में सीखें',
+      step6: 'वॉयस रिकग्निशन के साथ सुनें',
+      step7: 'AI के साथ अपनी प्रगति ट्रैक करें'
     }
   }
 };
