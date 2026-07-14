@@ -20,7 +20,7 @@ export const translations = {
       badge1: 'Nursery to 12th',
       badgeJee: 'JEE',
       badgeNeet: 'NEET',
-      titleLine1: 'Learning that',
+      titleLine1: 'AI-Powered learning that',
       titleHighlight: 'grows',
       titleLine2: 'with every student.',
       description: 'Complete learning support for school academics from Nursery to Grade 12, plus JEE and NEET preparation through real YouTube course pathways, quizzes and progress-ready content.',
@@ -30,12 +30,12 @@ export const translations = {
       studentCountLabel: 'Students learning with us',
       featureLive: 'Live Classes',
       featureLiveDesc: 'Learn in real time',
-      featureMentors: 'Expert Mentors',
-      featureMentorsDesc: 'Doubt help',
-      featureMock: 'Mock Tests',
-      featureMockDesc: 'Practice and improve',
-      featureProgress: 'Progress Tracking',
-      featureProgressDesc: 'Track your growth',
+      featureMentors: 'AI Expert Mentors',
+      featureMentorsDesc: 'AI supported doubt help',
+      featureMock: 'AI Mock Tests',
+      featureMockDesc: 'Adaptive practice & scoring',
+      featureProgress: 'AI Progress Tracking',
+      featureProgressDesc: 'Data-driven insights',
       featureAi: 'AI Learning Tool',
       featureAiDesc: 'Smart day-by-day topic search',
       featureTrans: 'Hindi Translation',
@@ -55,8 +55,8 @@ export const translations = {
     // Why Choose
     whyChoose: {
       kicker: 'Why Choose LMS',
-      heading: 'Everything a student needs in one place',
-      intro: 'Discover tools and guidance that make learning more focused, trackable and enjoyable.',
+      heading: 'Everything a student needs in one place, supercharged by AI',
+      intro: 'Discover AI-powered tools and guidance that make learning more focused, trackable and enjoyable.',
       card1Title: 'Structured Pathways',
       card1Text: 'Step-by-step learning modules mapped for school grades, JEE and NEET readiness.',
       card2Title: 'Premium Mentorship',
@@ -112,14 +112,14 @@ export const translations = {
 
     // CTA
     cta: {
-      heading: 'Ready to start learning?',
+      heading: 'Ready to start AI-powered learning?',
       description: 'Join learners preparing for school exams, JEE and NEET with focused video courses and quizzes.',
       button: 'Apply for Membership'
     },
 
     // Footer
     footer: {
-      tagline: 'Frontend-only LMS demo for Indian K-12, JEE and NEET learners.',
+      tagline: 'Frontend-only AI-powered LMS demo for Indian K-12, JEE and NEET learners.',
       product: 'Product',
       productCourses: 'Courses',
       productQuizzes: 'Quizzes',
@@ -169,7 +169,7 @@ export const translations = {
       badge1: 'नर्सरी से 12वीं',
       badgeJee: 'JEE',
       badgeNeet: 'NEET',
-      titleLine1: 'सीखना जो',
+      titleLine1: 'AI-आधारित सीखना जो',
       titleHighlight: 'बढ़े',
       titleLine2: 'हर छात्र के साथ।',
       description: 'नर्सरी से कक्षा 12 तक की स्कूली शिक्षा, साथ ही JEE और NEET की तैयारी के लिए YouTube कोर्स पाथवे, क्विज़ और प्रगति-ट्रैकिंग कंटेंट।',
@@ -179,12 +179,12 @@ export const translations = {
       studentCountLabel: 'छात्र हमारे साथ सीख रहे हैं',
       featureLive: 'लाइव क्लासेस',
       featureLiveDesc: 'रियल टाइम में सीखें',
-      featureMentors: 'विशेषज्ञ मेंटर',
-      featureMentorsDesc: 'डाउट हेल्प',
-      featureMock: 'मॉक टेस्ट',
-      featureMockDesc: 'अभ्यास और सुधार',
-      featureProgress: 'प्रगति ट्रैकिंग',
-      featureProgressDesc: 'अपनी ग्रोथ ट्रैक करें',
+      featureMentors: 'AI विशेषज्ञ मेंटर',
+      featureMentorsDesc: 'AI सपोर्ट के साथ डाउट हेल्प',
+      featureMock: 'AI मॉक टेस्ट',
+      featureMockDesc: 'एडेप्टिव प्रैक्टिस',
+      featureProgress: 'AI प्रगति ट्रैकिंग',
+      featureProgressDesc: 'डेटा-आधारित इनसाइट्स',
       featureAi: 'AI लर्निंग टूल',
       featureAiDesc: 'स्मार्ट तरीके से दिन-प्रतिदिन विषय खोजें',
       featureTrans: 'हिंदी अनुवाद',
@@ -204,8 +204,8 @@ export const translations = {
     // Why Choose
     whyChoose: {
       kicker: 'LMS क्यों चुनें',
-      heading: 'एक छात्र को जो चाहिए, सब एक जगह',
-      intro: 'ऐसे टूल्स और मार्गदर्शन खोजें जो सीखने को अधिक केंद्रित, ट्रैक करने योग्य और आनंददायक बनाएँ।',
+      heading: 'एक छात्र को जो चाहिए, सब एक जगह, AI की शक्ति के साथ',
+      intro: 'ऐसे AI-आधारित टूल्स और मार्गदर्शन खोजें जो सीखने को अधिक केंद्रित, ट्रैक करने योग्य और आनंददायक बनाएँ।',
       card1Title: 'संरचित पाथवे',
       card1Text: 'स्कूल ग्रेड, JEE और NEET की तैयारी के लिए क्रमबद्ध लर्निंग मॉड्यूल।',
       card2Title: 'प्रीमियम मेंटरशिप',
@@ -261,14 +261,14 @@ export const translations = {
 
     // CTA
     cta: {
-      heading: 'सीखना शुरू करने के लिए तैयार?',
+      heading: 'AI-आधारित शिक्षा शुरू करने के लिए तैयार?',
       description: 'स्कूल परीक्षा, JEE और NEET की तैयारी कर रहे छात्रों से जुड़ें — फोकस्ड वीडियो कोर्स और क्विज़ के साथ।',
       button: 'मेंबरशिप के लिए आवेदन करें'
     },
 
     // Footer
     footer: {
-      tagline: 'भारतीय K-12, JEE और NEET छात्रों के लिए फ्रंटएंड-ओनली LMS डेमो।',
+      tagline: 'भारतीय K-12, JEE और NEET छात्रों के लिए फ्रंटएंड-ओनली AI-आधारित LMS डेमो।',
       product: 'प्रोडक्ट',
       productCourses: 'कोर्स',
       productQuizzes: 'क्विज़',
