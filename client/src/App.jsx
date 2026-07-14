@@ -11,7 +11,7 @@ import Cta from './components/Cta.jsx';
 import Footer from './components/Footer.jsx';
 import CourseDetail from './components/CourseDetail.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
-import AiAdvantages from './components/AiAdvantages.jsx';
+import AIForLearning from './components/AIForLearning.jsx';
 
 export default function App() {
   const [selectedCourseId, setSelectedCourseId] = useState(null);
@@ -34,8 +34,8 @@ export default function App() {
       <main>
         <Header mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
         <Hero />
-        <AiAdvantages />
         <ScrollReveal><Stats /></ScrollReveal>
+        <AIForLearning />
         <ScrollReveal><WhyChoose /></ScrollReveal>
         <ScrollReveal><Courses onSelect={setSelectedCourseId} /></ScrollReveal>
         <ScrollReveal><Testimonials /></ScrollReveal>
