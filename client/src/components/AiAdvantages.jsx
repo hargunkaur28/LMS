@@ -2,6 +2,7 @@ import React from 'react';
 import './AiAdvantages.css';
 import { Target, Search, BookOpen, Languages, Globe, Mic, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext.jsx';
+import ScrollReveal from './ScrollReveal.jsx';
 
 export default function AiAdvantages() {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ export default function AiAdvantages() {
       <div className="roadmap-top-curve"></div>
       
       <div className="roadmap-container">
-        <h2 className="roadmap-title">{t('aiRoadmap.title')}</h2>
+        <ScrollReveal><h2 className="roadmap-title">{t('aiRoadmap.title')}</h2></ScrollReveal>
         
         <div className="roadmap-timeline-wrapper">
           <div className="roadmap-timeline-line"></div>
@@ -32,23 +33,32 @@ export default function AiAdvantages() {
               return (
                 <div key={step.id} className={`roadmap-step-container ${step.top ? 'text-top' : 'text-bottom'}`}>
                   {step.top && (
-                    <div className="roadmap-text-box top-text">
+                    <ScrollReveal 
+                      className="roadmap-text-box top-text"
+                      delay={index * 400 + 200}
+                    >
                       {step.text}
                       <div className="dotted-connector top-connector"></div>
-                    </div>
+                    </ScrollReveal>
                   )}
                   
-                  <div className="roadmap-circle">
+                  <ScrollReveal 
+                    className="roadmap-circle"
+                    delay={index * 400}
+                  >
                     <div className="roadmap-inner-circle">
                       <Icon size={28} color="#fff" strokeWidth={1.5} />
                     </div>
-                  </div>
+                  </ScrollReveal>
                   
                   {!step.top && (
-                    <div className="roadmap-text-box bottom-text">
+                    <ScrollReveal 
+                      className="roadmap-text-box bottom-text"
+                      delay={index * 400 + 200}
+                    >
                       <div className="dotted-connector bottom-connector"></div>
                       {step.text}
-                    </div>
+                    </ScrollReveal>
                   )}
                 </div>
               );
@@ -56,7 +66,9 @@ export default function AiAdvantages() {
           </div>
         </div>
 
-        <h3 className="roadmap-subtitle">{t('aiRoadmap.subtitle')}</h3>
+        <ScrollReveal delay={8 * 400}>
+          <h3 className="roadmap-subtitle">{t('aiRoadmap.subtitle')}</h3>
+        </ScrollReveal>
       </div>
 
       <div className="roadmap-bottom-curve"></div>
