@@ -35,7 +35,13 @@ export const translations = {
       featureMock: 'Mock Tests',
       featureMockDesc: 'Practice and improve',
       featureProgress: 'Progress Tracking',
-      featureProgressDesc: 'Track your growth'
+      featureProgressDesc: 'Track your growth',
+      featureAi: 'AI Learning Tool',
+      featureAiDesc: 'Smart day-by-day topic search',
+      featureTrans: 'Hindi Translation',
+      featureTransDesc: 'Seamlessly switch to learn in Hindi',
+      featureSpeech: 'Text to Speech',
+      featureSpeechDesc: 'Listen to content with voice recognition'
     },
 
     // Stats
@@ -62,7 +68,13 @@ export const translations = {
       card5Title: 'Practice & Assess',
       card5Text: 'Course detail pages include subject-specific quizzes with instant scoring.',
       card6Title: 'Achieve & Excel',
-      card6Text: 'Built for Nursery to 12th, foundation batches, JEE Main/Advanced and NEET UG aspirants.'
+      card6Text: 'Built for Nursery to 12th, foundation batches, JEE Main/Advanced and NEET UG aspirants.',
+      card7Title: 'AI-Powered Learning',
+      card7Text: 'Learn exactly what you need day-by-day with an intelligent assistant for a tailored journey.',
+      card8Title: 'Hindi Translation',
+      card8Text: 'Toggle to Hindi to learn in your preferred language easily without losing context.',
+      card9Title: 'Text to Speech',
+      card9Text: 'Listen to the content easily with built-in voice recognition and text-to-speech features.'
     },
 
     // Courses section
@@ -172,7 +184,13 @@ export const translations = {
       featureMock: 'मॉक टेस्ट',
       featureMockDesc: 'अभ्यास और सुधार',
       featureProgress: 'प्रगति ट्रैकिंग',
-      featureProgressDesc: 'अपनी ग्रोथ ट्रैक करें'
+      featureProgressDesc: 'अपनी ग्रोथ ट्रैक करें',
+      featureAi: 'AI लर्निंग टूल',
+      featureAiDesc: 'स्मार्ट तरीके से दिन-प्रतिदिन विषय खोजें',
+      featureTrans: 'हिंदी अनुवाद',
+      featureTransDesc: 'हिंदी में सीखने के लिए आसानी से स्विच करें',
+      featureSpeech: 'टेक्स्ट टू स्पीच',
+      featureSpeechDesc: 'वॉयस रिकग्निशन के साथ कंटेंट सुनें'
     },
 
     // Stats
@@ -199,7 +217,13 @@ export const translations = {
       card5Title: 'अभ्यास और मूल्यांकन',
       card5Text: 'कोर्स पेज पर विषय-विशिष्ट क्विज़ और तुरंत स्कोरिंग शामिल है।',
       card6Title: 'उपलब्धि और उत्कृष्टता',
-      card6Text: 'नर्सरी से 12वीं, फाउंडेशन बैच, JEE Main/Advanced और NEET UG के लिए बना।'
+      card6Text: 'नर्सरी से 12वीं, फाउंडेशन बैच, JEE Main/Advanced और NEET UG के लिए बना।',
+      card7Title: 'AI-आधारित शिक्षा',
+      card7Text: 'स्मार्ट AI के साथ दिन-प्रतिदिन अपनी आवश्यकता के अनुसार सटीक रूप से सीखें।',
+      card8Title: 'हिंदी अनुवाद',
+      card8Text: 'बिना संदर्भ खोए आसानी से अपनी पसंदीदा भाषा में सीखने के लिए हिंदी में टॉगल करें।',
+      card9Title: 'टेक्स्ट टू स्पीच',
+      card9Text: 'अंतर्निहित वॉयस रिकग्निशन और टेक्स्ट-टू-स्पीच सुविधाओं के साथ कंटेंट को आसानी से सुनें।'
     },
 
     // Courses section

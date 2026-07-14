@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { ArrowRight, BarChart3, GraduationCap, Star, UsersRound, Video } from 'lucide-react';
+import { ArrowRight, BarChart3, GraduationCap, Star, UsersRound, Video, Bot, Languages, Mic } from 'lucide-react';
 import LiquidChrome from './LiquidChrome';
 import { useLanguage } from '../context/LanguageContext.jsx';
 
@@ -75,6 +75,16 @@ export default function Hero() {
             <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=120&q=80" alt="Indian mentor" />
           </div>
           <div><strong>{t('hero.studentCount')}</strong><span>{t('hero.studentCountLabel')}</span></div>
+        </div>
+        <div 
+          className={`hero-extra-features reveal-item ${isMounted ? 'is-visible' : ''}`} 
+          style={{ '--delay': '520ms', '--reveal-translate': '10px' }}
+        >
+          <ul style={{ listStyle: 'none', padding: 0, marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#111827', fontSize: '0.95rem', fontWeight: '600' }}><Bot size={18} color="#4e2bd9" /> <strong>{t('hero.featureAi')}:</strong> {t('hero.featureAiDesc')}</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#111827', fontSize: '0.95rem', fontWeight: '600' }}><Languages size={18} color="#4e2bd9" /> <strong>{t('hero.featureTrans')}:</strong> {t('hero.featureTransDesc')}</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#111827', fontSize: '0.95rem', fontWeight: '600' }}><Mic size={18} color="#4e2bd9" /> <strong>{t('hero.featureSpeech')}:</strong> {t('hero.featureSpeechDesc')}</li>
+          </ul>
         </div>
       </div>
       <div 

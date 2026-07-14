@@ -1,4 +1,4 @@
-import { BarChart3, BookOpen, ClipboardCheck, Star, Target, UsersRound } from 'lucide-react';
+import { BarChart3, BookOpen, ClipboardCheck, Star, Target, UsersRound, Bot, Languages, Mic } from 'lucide-react';
 import TiltedCard from './TiltedCard';
 import { useLanguage } from '../context/LanguageContext.jsx';
 
@@ -11,7 +11,10 @@ export default function WhyChoose() {
     { Icon: BarChart3, title: t('whyChoose.card3Title'), text: t('whyChoose.card3Text') },
     { Icon: BookOpen, title: t('whyChoose.card4Title'), text: t('whyChoose.card4Text') },
     { Icon: ClipboardCheck, title: t('whyChoose.card5Title'), text: t('whyChoose.card5Text') },
-    { Icon: Star, title: t('whyChoose.card6Title'), text: t('whyChoose.card6Text') }
+    { Icon: Star, title: t('whyChoose.card6Title'), text: t('whyChoose.card6Text') },
+    { Icon: Bot, title: t('whyChoose.card7Title'), text: t('whyChoose.card7Text') },
+    { Icon: Languages, title: t('whyChoose.card8Title'), text: t('whyChoose.card8Text') },
+    { Icon: Mic, title: t('whyChoose.card9Title'), text: t('whyChoose.card9Text') }
   ];
 
   return (
