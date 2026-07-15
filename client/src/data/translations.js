@@ -165,13 +165,13 @@ export const translations = {
       kicker: 'AI For Bharat',
       heading: 'AI that speaks your child\'s language — literally',
       subheading: 'Built for students in rural and small-town India, LMS uses homegrown Indian AI to teach, tutor, and explain — in the language your child understands best.',
-      card1Title: 'Powered by Sarvam AI',
+      card1Title: 'Sarvam AI',
       card1Text: 'India\'s own AI models that understand and speak Hindi, Tamil, Telugu, Bengali, and more — so every child can learn by speaking, not just typing.',
-      card2Title: '100% Homegrown, Built for Bharat',
+      card2Title: 'Built for Bharat',
       card2Text: 'Designed around Indian syllabi, Indian accents, and real rural classroom needs — not imported from Silicon Valley.',
-      card3Title: 'A Personal AI Tutor, Anytime',
+      card3Title: 'AI Tutor',
       card3Text: 'A patient AI tutor that explains concepts again and again in your child\'s own language, at their own pace — no private tuition needed.',
-      card4Title: 'AI-Made Notes You Can Print & Keep',
+      card4Title: 'AI Notes & PDFs',
       card4Text: 'AI-generated notes and PDFs in the student\'s language — download once, print locally, and study offline anytime.'
     }
   },
@@ -342,13 +342,13 @@ export const translations = {
       kicker: 'भारत के लिए AI',
       heading: 'AI जो आपके बच्चे की भाषा बोलता है — सच में',
       subheading: 'ग्रामीण और छोटे शहरों के छात्रों के लिए बना, LMS भारतीय AI का उपयोग करके आपके बच्चे की समझ की भाषा में पढ़ाता, सिखाता और समझाता है।',
-      card1Title: 'Sarvam AI द्वारा संचालित',
+      card1Title: 'Sarvam AI',
       card1Text: 'भारत के अपने AI मॉडल जो हिंदी, तमिल, तेलुगु, बंगाली और अन्य भाषाएँ समझते और बोलते हैं — ताकि हर बच्चा बोलकर सीख सके।',
-      card2Title: '100% स्वदेशी, भारत के लिए बना',
+      card2Title: 'भारत के लिए बना',
       card2Text: 'भारतीय पाठ्यक्रम, भारतीय उच्चारण और ग्रामीण कक्षा की ज़रूरतों के अनुसार डिज़ाइन — सिलिकॉन वैली से आयातित नहीं।',
-      card3Title: 'एक निजी AI ट्यूटर, कभी भी',
+      card3Title: 'AI ट्यूटर',
       card3Text: 'बच्चे की अपनी भाषा में, अपनी गति से, धैर्य से समझाने वाला AI ट्यूटर — प्राइवेट ट्यूशन की ज़रूरत नहीं।',
-      card4Title: 'AI से बने नोट्स जो प्रिंट और रख सकते हैं',
+      card4Title: 'AI नोट्स और PDF',
       card4Text: 'छात्र की भाषा में AI-जनित नोट्स और PDF — एक बार डाउनलोड करें, स्थानीय रूप से प्रिंट करें, कभी भी ऑफ़लाइन पढ़ें।'
     }
   }

@@ -8,6 +8,7 @@ export default function AIForLearning() {
 
   /** Wrap every occurrence of "Sarvam AI" in a highlight span */
   const highlightSarvam = (text) => {
+    if (!text) return '';
     const keyword = 'Sarvam AI';
     const idx = text.indexOf(keyword);
     if (idx === -1) return text;
@@ -20,86 +21,157 @@ export default function AIForLearning() {
     );
   };
 
-  const points = [
-    { Icon: Mic,      titleKey: 'aiForLearning.card1Title', textKey: 'aiForLearning.card1Text' },
-    { Icon: Sprout,   titleKey: 'aiForLearning.card2Title', textKey: 'aiForLearning.card2Text' },
-    { Icon: Bot,      titleKey: 'aiForLearning.card3Title', textKey: 'aiForLearning.card3Text' },
-    { Icon: FileText, titleKey: 'aiForLearning.card4Title', textKey: 'aiForLearning.card4Text' },
-  ];
-
   return (
     <section className="ai-for-learning" id="ai-for-learning">
       <div className="ai-for-learning-inner">
-        <div className="ai-two-col">
-
-
-          {/* ── Left column: text ── */}
-          <div className="ai-text-col">
-            <ScrollReveal>
-              <div className="ai-kicker-row">
-                <div className="ai-tricolor-bar">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <span className="ai-kicker-text">{t('aiForLearning.kicker')}</span>
+        {/* Section Heading & Subheading stay exactly as already written */}
+        <div className="ai-header-block">
+          <ScrollReveal>
+            <div className="ai-kicker-row">
+              <div className="ai-tricolor-bar">
+                <span />
+                <span />
+                <span />
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={100}>
-              <h2>{t('aiForLearning.heading')}</h2>
-            </ScrollReveal>
-
-            <ScrollReveal delay={200}>
-              <p className="ai-for-learning-sub">{t('aiForLearning.subheading')}</p>
-            </ScrollReveal>
-
-            {/* Compact icon list */}
-            <ul className="ai-point-list">
-              {points.map(({ Icon, titleKey, textKey }, i) => {
-                const title = t(titleKey);
-                const desc = t(textKey);
-                return (
-                  <ScrollReveal key={titleKey} delay={300 + i * 100}>
-                    <li className="ai-point-item">
-                      <div className="ai-point-icon">
-                        <Icon size={20} strokeWidth={1.8} />
-                      </div>
-                      <div className="ai-point-text">
-                        <h3>{highlightSarvam(title)}</h3>
-                        <p>{highlightSarvam(desc)}</p>
-                      </div>
-                    </li>
-                  </ScrollReveal>
-                );
-              })}
-            </ul>
-
-          </div>
-
-          {/* ── Right column: overlapping photos ── */}
-          <ScrollReveal delay={350} className="ai-photo-col">
-            <div className="ai-photo-stack">
-              <div className="ai-photo ai-photo-primary" aria-label="Rural Indian student engaged in learning">
-                <img
-                  src="https://images.hindustantimes.com/rf/image_size_800x600/HT/p2/2016/09/20/Pictures/hindustan-chokhandi-september-computer-september-students-learning_d5176eee-7f5d-11e6-a0d9-e435f3f63e15.jpg"
-                  alt="Rural Indian students learning on computers"
-                />
-              </div>
-
-              <div className="ai-photo ai-photo-secondary" aria-label="Rural Indian teacher or parent supporting learning">
-                <img
-                  src="https://villagesquare.in/wp-content/uploads/2017/10/Computers1.jpg"
-                  alt="Students learning together in rural school classroom"
-                />
-              </div>
-
-              {/* Decorative accent doodle */}
-              <svg className="ai-doodle-star" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <path d="M20 2l4.5 13.8H39l-11.7 8.5 4.5 13.8L20 29.6 8.2 38.1l4.5-13.8L1 15.8h14.5z" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span className="ai-kicker-text">{t('aiForLearning.kicker')}</span>
             </div>
           </ScrollReveal>
+
+          <ScrollReveal delay={100}>
+            <h2>{t('aiForLearning.heading')}</h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <p className="ai-for-learning-sub">{t('aiForLearning.subheading')}</p>
+          </ScrollReveal>
+        </div>
+
+        {/* Scattered Collage Grid Container */}
+        <div className="ai-scatter-container">
+          
+          {/* Pathway connecting SVG line (hidden on mobile) */}
+          <svg className="ai-pathway-svg" viewBox="0 0 1200 330" preserveAspectRatio="none" aria-hidden="true">
+            <path 
+              d="M 100 135 C 200 10, 200 320, 300 185 C 400 50, 400 290, 500 150 C 600 10, 600 320, 700 185 C 800 50, 800 290, 900 135 C 1000 0, 1000 330, 1100 185" 
+              fill="none" 
+              stroke="rgba(99, 91, 255, 0.25)" 
+              strokeWidth="3" 
+              strokeDasharray="8 10" 
+            />
+          </svg>
+
+          {/* Pathway connecting SVG line for mobile (hidden on desktop) */}
+          <svg className="ai-pathway-mobile-svg" viewBox="0 0 320 1200" preserveAspectRatio="none" aria-hidden="true">
+            <path 
+              d="M 100 80 C 100 170, 220 170, 220 260 C 220 390, 100 390, 100 520 C 100 610, 220 610, 220 700 C 220 830, 100 830, 100 960 C 100 1050, 220 1050, 220 1140" 
+              fill="none" 
+              stroke="rgba(99, 91, 255, 0.22)" 
+              strokeWidth="3" 
+              strokeDasharray="8 10" 
+            />
+          </svg>
+
+          {/* Zone 1: Content Circle (Sarvam AI) - Violet */}
+          <ScrollReveal className="ai-zone ai-zone-1" delay={250}>
+            <div className="ai-item-card violet-tint">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  <Mic size={32} className="ai-icon" />
+                  <span className="ai-circle-label">{t('aiForLearning.card1Title')}</span>
+                  <p className="ai-circle-desc">{highlightSarvam(t('aiForLearning.card1Text'))}</p>
+                </div>
+              </div>
+              <div className="ai-caption-wrap">
+                <h3 className="ai-mobile-label">{t('aiForLearning.card1Title')}</h3>
+                <p className="ai-caption">{highlightSarvam(t('aiForLearning.card1Text'))}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Zone 2: Image Circle 1 (Primary Photo) */}
+          <ScrollReveal className="ai-zone ai-zone-2" delay={300}>
+            <div className="ai-item-card image-card primary-img">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  {/* TODO: replace with real photo */}
+                  <img
+                    src="https://images.hindustantimes.com/rf/image_size_800x600/HT/p2/2016/09/20/Pictures/hindustan-chokhandi-september-computer-september-students-learning_d5176eee-7f5d-11e6-a0d9-e435f3f63e15.jpg"
+                    alt="Rural Indian students learning on computers"
+                  />
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Zone 3: Content Circle (Built for Bharat) - Mint */}
+          <ScrollReveal className="ai-zone ai-zone-3" delay={350}>
+            <div className="ai-item-card mint-tint">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  <Sprout size={32} className="ai-icon" />
+                  <span className="ai-circle-label">{t('aiForLearning.card2Title')}</span>
+                  <p className="ai-circle-desc">{highlightSarvam(t('aiForLearning.card2Text'))}</p>
+                </div>
+              </div>
+              <div className="ai-caption-wrap">
+                <h3 className="ai-mobile-label">{t('aiForLearning.card2Title')}</h3>
+                <p className="ai-caption">{highlightSarvam(t('aiForLearning.card2Text'))}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Zone 4: Image Circle 2 (Secondary Photo) */}
+          <ScrollReveal className="ai-zone ai-zone-4" delay={400}>
+            <div className="ai-item-card image-card secondary-img">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  {/* TODO: replace with real photo */}
+                  <img
+                    src="https://villagesquare.in/wp-content/uploads/2017/10/Computers1.jpg"
+                    alt="Students learning together in rural school classroom"
+                  />
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Zone 5: Content Circle (AI Tutor) - Orange */}
+          <ScrollReveal className="ai-zone ai-zone-5" delay={450}>
+            <div className="ai-item-card orange-tint">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  <Bot size={32} className="ai-icon" />
+                  <span className="ai-circle-label">{t('aiForLearning.card3Title')}</span>
+                  <p className="ai-circle-desc">{highlightSarvam(t('aiForLearning.card3Text'))}</p>
+                </div>
+              </div>
+              <div className="ai-caption-wrap">
+                <h3 className="ai-mobile-label">{t('aiForLearning.card3Title')}</h3>
+                <p className="ai-caption">{highlightSarvam(t('aiForLearning.card3Text'))}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Zone 6: Image Circle 3 (Shutterstock Photo) */}
+          <ScrollReveal className="ai-zone ai-zone-6" delay={500}>
+            <div className="ai-item-card image-card secondary-img">
+              <div className="ai-circle-wrap">
+                <div className="ai-circle">
+                  {/* TODO: replace with real photo */}
+                  <img
+                    src="https://www.shutterstock.com/image-photo/indian-village-government-school-boys-260nw-2251941889.jpg"
+                    alt="Indian village government school boys"
+                  />
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 3-4 small decorative dots: violet, mint, orange, scattered freely */}
+          <div className="ai-decorative-dot dot-violet" aria-hidden="true"></div>
+          <div className="ai-decorative-dot dot-mint" aria-hidden="true"></div>
+          <div className="ai-decorative-dot dot-orange" aria-hidden="true"></div>
+          <div className="ai-decorative-dot dot-violet-small" aria-hidden="true"></div>
 
         </div>
       </div>
