@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 
 import './LiquidChrome.css';
@@ -13,13 +13,27 @@ export const LiquidChrome = ({
   ...props
 }) => {
   const containerRef = useRef(null);
+  const [webGlSupported, setWebGlSupported] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     const container = containerRef.current;
-    const renderer = new Renderer({ antialias: true });
-    const gl = renderer.gl;
+    let renderer;
+    let gl;
+
+    try {
+      renderer = new Renderer({ antialias: true });
+      gl = renderer.gl;
+      if (!gl) {
+        throw new Error('WebGL context is null');
+      }
+    } catch (e) {
+      console.warn('WebGL not supported or failed to initialize. Falling back to background gradient.', e);
+      setWebGlSupported(false);
+      return;
+    }
+
     gl.clearColor(0.97, 0.98, 1.0, 1.0);
 
     const vertexShader = `
@@ -97,6 +111,7 @@ export const LiquidChrome = ({
     const mesh = new Mesh(gl, { geometry, program });
 
     function resize() {
+      if (!container || !renderer || !gl || !program) return;
       const width = container.clientWidth || container.offsetWidth || 300;
       const height = container.clientHeight || container.offsetHeight || 150;
       renderer.setSize(width, height);
@@ -113,6 +128,7 @@ export const LiquidChrome = ({
     resize();
 
     function handleMouseMove(event) {
+      if (!container || !program) return;
       const rect = container.getBoundingClientRect();
       const x = (event.clientX - rect.left) / rect.width;
       const y = 1 - (event.clientY - rect.top) / rect.height;
@@ -122,15 +138,14 @@ export const LiquidChrome = ({
     }
 
     function handleTouchMove(event) {
-      if (event.touches.length > 0) {
-        const touch = event.touches[0];
-        const rect = container.getBoundingClientRect();
-        const x = (touch.clientX - rect.left) / rect.width;
-        const y = 1 - (touch.clientY - rect.top) / rect.height;
-        const mouseUniform = program.uniforms.uMouse.value;
-        mouseUniform[0] = x;
-        mouseUniform[1] = y;
-      }
+      if (!container || !program || event.touches.length === 0) return;
+      const touch = event.touches[0];
+      const rect = container.getBoundingClientRect();
+      const x = (touch.clientX - rect.left) / rect.width;
+      const y = 1 - (touch.clientY - rect.top) / rect.height;
+      const mouseUniform = program.uniforms.uMouse.value;
+      mouseUniform[0] = x;
+      mouseUniform[1] = y;
     }
 
     if (interactive) {
@@ -155,14 +170,21 @@ export const LiquidChrome = ({
         window.removeEventListener('mousemove', handleMouseMove);
         window.removeEventListener('touchmove', handleTouchMove);
       }
-      if (gl.canvas.parentElement) {
+      if (gl.canvas && gl.canvas.parentElement) {
         gl.canvas.parentElement.removeChild(gl.canvas);
       }
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, [baseColor, speed, amplitude, frequencyX, frequencyY, interactive]);
 
-  return <div ref={containerRef} className="liquidChrome-container" {...props} />;
+  // If WebGL is not supported, container renders a clean fallback static gradient
+  return (
+    <div 
+      ref={containerRef} 
+      className={`liquidChrome-container ${!webGlSupported ? 'webgl-fallback' : ''}`} 
+      {...props} 
+    />
+  );
 };
 
 export default LiquidChrome;

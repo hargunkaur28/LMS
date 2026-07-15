@@ -12,3 +12,9 @@
   top: 0;
   left: 0;
 }
+
+.webgl-fallback {
+  background: radial-gradient(circle at 75% 10%, rgba(70, 58, 219, 0.1), transparent 40rem),
+              radial-gradient(circle at 15% 70%, rgba(14, 165, 233, 0.08), transparent 30rem),
+              #f8fbff;
+}
